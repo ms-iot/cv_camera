@@ -24,8 +24,9 @@ include_directories(
   )
 
 ## Declare a cpp library
-add_library(cv_camera src/capture.cpp src/driver.cpp)
-add_library(cv_camera_nodelet src/cv_camera_nodelet.cpp)
+add_library(cv_camera STATIC src/capture.cpp src/driver.cpp)
+add_library(cv_camera_nodelet SHARED src/cv_camera_nodelet.cpp)
+set_target_properties(cv_camera_nodelet PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE) 
 
 
 ## Declare a cpp executable
