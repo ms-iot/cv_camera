@@ -1,6 +1,6 @@
 ROS OpenCV camera driver
 ========================
-It is very easy to capture video device if we use cv::VideoCapture of OpenCV.
+It is very easy to capture video device if we use `cv::VideoCapture` of OpenCV.
 
 cv_camera_node
 ------------------
